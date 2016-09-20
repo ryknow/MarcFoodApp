@@ -1,0 +1,51 @@
+﻿<div class="container">
+
+    <h1>Marc's Nutrition Main Page</h1>
+
+    <p>
+        This is the main page of the nutrition application.
+        This app allows me to enter the food I eat in a day
+    </p>
+
+    <div>Date: <input type="text" ng-model="dateValStr" /></div>
+    <div>Meal Type: <input type="text" ng-model="mealTypeStr" /></div>
+    <div>Amount: <input type="text" ng-model="amountStr" /></div>
+    <div>Food Eaten: <input type="text" ng-model="foodStr" /></div>
+
+    <br />
+    <div>
+        <button ng-click="enterFood()">Submit</button>
+       	<a href="#foods/">Look Up Food</a>
+    </div>
+    <br />
+
+    <h4>Items Eaten Display</h4>
+
+    <table border="1">
+        <tr>
+            <th> Date </th>
+            <th> Meal </th>
+            <th> Amount Eaten </th>
+            <th> Food </th>
+        </tr>
+        <tr ng-repeat="foodeaten in foodseaten">
+            <td>{{foodeaten.date}} </td>
+            <td>{{foodeaten.mealType}} </td>
+            <td>{{foodeaten.amount}} </td>
+            <td>{{foodeaten.foodItem}} </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Marc Nutrition App</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
+
+</div>

@@ -1,0 +1,45 @@
+﻿<div class="container">
+
+    <h3>List of Foods HTML file</h3>
+    <p>This is the list of Foods file where I will place all the foods I eat with their carb count</p>
+
+    <h2> View Foods </h2>
+
+    <div>Name of Food: <input type="text" ng-model="nameOfFoodStr" /></div>
+    <div>Calories: <input type="text" ng-model="caloriesStr" /></div>
+    <div>Carbs: <input type="text" ng-model="carbsStr" /></div>
+
+    <div>
+        <button ng-click="enterFood()">Submit</button>
+    </div>
+
+    <a href="#/"> Back</a>
+
+    <h4>Items Eaten Display</h4>
+
+    <table border="1">
+        <tr>
+            <th> Name </th>
+            <th> Calories </th>
+            <th> Carbs </th>
+        </tr>
+        <tr ng-repeat="listfood in listfoods">
+            <td>{{listfood.name}} </td>
+            <td>{{listfood.calories}} </td>
+            <td>{{listfood.carbs}} </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Marc Nutrition List Foods</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
+
+</div>
