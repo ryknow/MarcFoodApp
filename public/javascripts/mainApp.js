@@ -26,9 +26,11 @@ angular.module('mainApp', ['ngRoute', 'ngResource'])
 //---------------
 
 .factory('FoodsEaten', ['$resource', function ($resource) {
-    return $resource('/foodseaten/:id', null, {
-     'update': { method:'PUT' }
-   });
+    return $resource('/foodseaten/');
+}])
+
+.factory('ListFoods', ['$resource', function ($resource) {
+    return $resource('/listfoods');
 }])
 
 //---------------
